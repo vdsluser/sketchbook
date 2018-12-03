@@ -428,7 +428,7 @@
 .rd_file th{padding-right:0;white-space:nowrap}
 .rd_file td{width:100%}
 .rd_file ul{list-style:none;float:left;margin:0;padding:0}
-.rd_file li{float:left;padding:2px 8px 2px 0}
+.rd_file li{float:left;padding:2px 8px 2px 0; white-space:nowrap;}
 .rd_file .wrp{font-size:10px}
 .rd_hd .rd_file{margin:-1px 0;border-bottom:1px solid #DDD}
 .rd_hd .rd_file th{padding-left:15px}
