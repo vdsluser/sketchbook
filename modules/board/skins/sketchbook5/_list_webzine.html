@@ -24,7 +24,7 @@
 			<!--// 제목 -->
 			<h3 class="ngeb">{$document->getTitle($mi->subject_cut_size)}</h3>
 			<!--// 본문 요약 -->
-			<div class="cnt" cond="$list_config['summary']">{$document->getSummary($mi->content_cut_size)}</div>
+			<div class="cnt" cond="$list_config['summary']">{nl2br($document->getSummary($mi->content_cut_size))}</div>
 			<!--// 글 정보 -->
 			<div class="info">
 				<span cond="$list_config['regdate'] && $mi->zine_style!='2'"><i class="fa fa-clock-o"></i><span>Date</span><b>{$document->getRegdate("Y.m.d")}</b></span>
@@ -87,7 +87,7 @@
 			<!--// 제목 -->
 			<h3 class="ngeb">{$document->getTitle($mi->subject_cut_size)}</h3>
 			<!--// 본문 요약 -->
-			<div class="cnt" cond="$list_config['summary']">{$document->getSummary($mi->content_cut_size)}</div>
+			<div class="cnt" cond="$list_config['summary']">{nl2br($document->getSummary($mi->content_cut_size))}</div>
 			<!--// 글 정보 -->
 			<div class="info">
 				<span cond="$list_config['regdate'] && $mi->zine_style!='2'"><i class="fa fa-clock-o"></i><span>Date</span><b>{$document->getRegdate("Y.m.d")}</b></span>
