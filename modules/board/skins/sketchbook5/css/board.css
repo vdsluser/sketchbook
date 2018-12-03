@@ -899,7 +899,9 @@ body.viewer_blk{background:#222}
 .bd_zine.zine .is_tmb .tmb_wrp{margin-left:-84px}
 .bd_zine.zine .is_tmb .ribbon{position:absolute;margin:-1px 1px}
 .bd_zine h3{font-size:14px;line-height:1.3}
-.bd_zine.zine .cnt{overflow:hidden;max-height:32px;margin:6px 0 4px;font-size:12px;line-height:16px}
+/* .bd_zine.zine .cnt{overflow:hidden;max-height:32px;margin:6px 0 4px;font-size:12px;line-height:16px} */
+.bd_zine.zine .cnt{margin:6px 0 4px;font-size:12px;line-height:16px; color:#777;}
+.bd_zine.zine .cnt p { font-size:12px; line-height:16px; color:#777;}
 .bd_zine.zine .info>span{margin:6px 4px 0 0;padding-right:6px}
 .bd_zine.zine .info b{margin-left:2px}
 .bd_zine.card>li{margin:6px}
