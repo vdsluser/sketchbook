@@ -66,7 +66,15 @@
 			</span>
 		</form>
 		<!--@else-->
-		{$comment->getContent(false)}
+		    <!--@if($comment->parent_srl)-->
+		    {@
+			$oComment = &getModel('comment');
+			$comment_parent = $oComment->getComment($comment->parent_srl);
+		    }
+		    {$comment_parent->getNickName()} 님에게 달린 댓글 {$comment->getContent(false)}
+		    <!--@else-->
+			{$comment->getContent(false)}
+		    <!--@end-->
 		<!--@end-->
 		<!--// 편집 등 -->
 		<div class="fdb_nav img_tx">
