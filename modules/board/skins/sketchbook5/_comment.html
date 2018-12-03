@@ -9,12 +9,23 @@
 
 <ul class="fdb_lst_ul {$mi->fdb_hide}">
 	<block loop="$oDocument->getComments()=>$key,$comment">
-<!--@if($comment->get('depth'))-->
-	<li id="comment_{$comment->comment_srl}" class="fdb_itm clear re bg{($comment->get('depth'))%2}" style="margin-left:{(($comment->get('depth')-1)%10+1)*2}%">
-		<i class="fa fa-share fa-flip-vertical re"></i><i cond="$comment->get('depth')>10" class="fa fa-share fa-flip-vertical re rere"></i>
-<!--@else-->
-	<li id="comment_{$comment->comment_srl}" class="fdb_itm clear">
-<!--@end-->
+
+	<!--@if($comment->get('depth'))-->
+		<!--@ if($comment->member_srl==$oDocument->variables[member_srl])-->
+			<li id="comment_{$comment->comment_srl}" class="fdb_itm clear re bg{($comment->get('depth'))%2}" style="border:2px red solid;margin-left:{(($comment->get('depth')-1)%10+1)*2}%">
+			<i class="fa fa-share fa-flip-vertical re"></i><i cond="$comment->get('depth')>10" class="fa fa-share fa-flip-vertical re rere"></i>
+   		<!--@else-->
+			<li id="comment_{$comment->comment_srl}" class="fdb_itm clear re bg{($comment->get('depth'))%2}" style="margin-left:{(($comment->get('depth')-1)%10+1)*2}%">
+			<i class="fa fa-share fa-flip-vertical re"></i><i cond="$comment->get('depth')>10" class="fa fa-share fa-flip-vertical re rere"></i>
+    		<!--@end-->
+   	<!--@else-->
+		<!--@ if($comment->member_srl==$oDocument->variables[member_srl])-->
+			<li id="comment_{$comment->comment_srl}" class="fdb_itm clear" style="border:2px red solid;" >
+		<!--@else-->
+			<li id="comment_{$comment->comment_srl}" class="fdb_itm clear">
+		<!--@end-->
+	<!--@end-->
+				
 		<!--// 프로필 -->
 		<block cond="!$mi->profile_img">
 		<img cond="$comment->getProfileImage()" class="profile img" src="{$comment->getProfileImage()}" alt="profile" />
