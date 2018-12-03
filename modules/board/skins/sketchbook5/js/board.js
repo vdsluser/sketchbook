@@ -390,6 +390,8 @@ if(bd.find('div.rd').length){
 		var t = $(this);
 		var type = t.data('type');
 		var p = t.parent();
+		if(!p.hasClass('to_sns')) p = t.parent().parent();
+		if(!p.hasClass('to_sns')) p = t.parent().parent();
 		var href = p.data('url');
 		var permanentUrl = p.data('permanenturl');
 		var title = p.data('title');
