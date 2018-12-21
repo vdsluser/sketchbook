@@ -1766,6 +1766,79 @@
 			</var>
 		</group>
 		<group>
+		<title xml:lang="ko">광고 설정</title>
+			<var name="contentsTopAd" type="select">
+				<title xml:lang="ko">본문 상단에 광고 사용</title>
+					<description xml:lang="ko">게시판 본문 상단에 광고 출력을 결정합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용안함 (기본)</title>
+				</options>
+				<options value="Y">
+				<title xml:lang="ko">사용함</title>
+				</options>
+			</var>
+			<var name="contentsTopAdTag" type="textarea">
+				<title xml:lang="ko">본문 상단 광고 코드</title>
+				<description xml:lang="ko">구글 애드센스같은 광고 코드를 넣어주세요.</description>
+			</var>
+			<var name="contentsBottomAd" type="select">
+				<title xml:lang="ko">본문 하단에 광고 사용</title>
+					<description xml:lang="ko">게시판 본문 하단에 광고 출력을 결정합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용안함 (기본)</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용함</title>
+				</options>
+			</var>
+			<var name="contentsBottomAdTag" type="textarea">
+				<title xml:lang="ko">본문 하단 광고 코드</title>
+				<description xml:lang="ko">구글 애드센스같은 광고 코드를 넣어주세요.</description>
+			</var>
+			<var name="listAd" type="select">
+				<title xml:lang="ko">목록에 광고 사용</title>
+					<description xml:lang="ko">게시판 목록에 인피드 광고 출력을 결정합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용안함 (기본)</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용함</title>
+				</options>
+			</var>
+			<var name="listAdTag" type="textarea">
+				<title xml:lang="ko">목록 광고 코드</title>
+				<description xml:lang="ko">구글 애드센스같은 광고 코드를 넣어주세요.</description>
+			</var>
+			<var name="listMobileAd" type="select">
+				<title xml:lang="ko">모바일 목록에 광고 사용</title>
+					<description xml:lang="ko">게시판 목록에 인피드 광고 출력을 결정합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용안함 (기본)</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용함</title>
+				</options>
+			</var>
+			<var name="listMobileAdTag" type="textarea">
+				<title xml:lang="ko">모바일 목록 광고 코드</title>
+				<description xml:lang="ko">구글 애드센스같은 광고 코드를 넣어주세요.</description>
+			</var>
+			<var name="commentAd" type="select">
+				<title xml:lang="ko">댓글 광고 사용</title>
+					<description xml:lang="ko">게시판 댓글에 광고 출력을 결정합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용안함 (기본)</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용함</title>
+				</options>
+			</var>
+			<var name="commentAdTag" type="textarea">
+				<title xml:lang="ko">댓글 광고 코드</title>
+				<description xml:lang="ko">구글 애드센스같은 광고 코드를 넣어주세요.</description>
+			</var>
+		</group>		
+		<group>
 		<title xml:lang="ko">*모바일 설정</title>
 			<var name="img_link" type="radio">
 				<title xml:lang="ko">이미지 원본 링크</title>
