@@ -1,3 +1,18 @@
+<load target="//developers.kakao.com/sdk/js/kakao.min.js" />
+<script type='text/javascript'>
+  //<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('{$mi->kakao_key}');
+    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    function sendLink() {
+      Kakao.Link.sendScrap({
+      requestUrl: '{$sns_link}'
+      });
+    }
+  //]]>
+</script>
+
+
 {@
 	$mi->tmb_effect='N';
 	if(!$mi->rd_tl_font) $mi->rd_tl_font='ngeb';
@@ -324,7 +339,7 @@ Source form : http://www.xpressengine.com/21617245 by 시니시즘. Thanks!
 			<!--@if(Mobile::isMobileCheckByAgent())-->
 			<a class="kakaostory" href="storylink://posting?post={$oDocument->getPermanentUrl()}&appid=m.kakao.com&appver=1.0&apiver=1.0&appname={$mi->title}"><b class="ico_sns kakaostory">KakaoStory</b></a>
 			<a class="band" href="bandapp://create/post?text={$sns_title}%0A{$sns_link}"><b class="ico_sns band">Band</b></a>
-			<a class="kakao" href="#" data-type="kakao"><b class="ico_sns kakao">Kakao</b></a>
+			<a class="kakao" href="javascript:sendLink()" ><b class="ico_sns kakao">Kakao</b></a>
 			<a class="line" href="line://msg/text/?{$sns_title}%0D%0A{$sns_link}"><b class="ico_sns line">Line</b></a>
 			<!--@else-->
 			<a class="kakaostory bubble" href="#" data-type="kakaostory" title="To KakaoStory"><b class="ico_sns kakaostory">KakaoStory</b></a>
