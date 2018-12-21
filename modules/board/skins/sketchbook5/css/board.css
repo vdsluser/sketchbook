@@ -428,7 +428,7 @@
 .rd_file th{padding-right:0;white-space:nowrap}
 .rd_file td{width:100%}
 .rd_file ul{list-style:none;float:left;margin:0;padding:0}
-.rd_file li{float:left;padding:2px 8px 2px 0; white-space:nowrap;}
+.rd_file li{float:left;padding:2px 8px 2px 0}
 .rd_file .wrp{font-size:10px}
 .rd_hd .rd_file{margin:-1px 0;border-bottom:1px solid #DDD}
 .rd_hd .rd_file th{padding-left:15px}
@@ -700,29 +700,6 @@
 .bd_zine.info_icon .info>span>span{display:none}
 .bd_zine.info_icon2 .info i{margin-right:4px}
 
-
-/* 웹진 목록 상세정보*/
-.bd_zine.zine .info > span{display:block;border-right:none;}
-.bd_zine.zine .info{font-size:16px;color:#3a3a3a;line-height:140%;}
-.bd_zine.zine .info > span:before{content:"· "}
-.bd_zine .info b{font-weight:normal;}
-.bd_zine .info b:before{content: ": "}
-
-/* 웹진 목록 글제목 */
-.bd_zine h3{color:#333;font-size:21px;font-weight:700;}
-
-/* 웹진 카테고리 */
-.cnb3{margin-bottom:10px;}
-.cnb3 .on > a, .cnb3 a:hover, .cnb3 a:focus{background:#3b7bea !important;font-size:16px;text-shadow:none;color:#fff;}
-.cnb3 a{background:#f5f5f5 !important;border:none;height:42px;line-height:42px;font-size:16px;}
-.cnb3.center li{margin-left:10px;min-width:130px;}
-.cnb3.center li:first-child{margin:0;}
-
-/* 웹진 페이징 */
-.bd_pg .this, .bd_pg a:hover, .bd_pg a:focus{background:#515151;color:#fff;border:1px solid #374048;padding:10px 15px;border-radius:0;}
-.bubble .wrp{color:#888}
-
-
 /* Gallery */
 .bd_tmb_lst{padding:24px 0;text-align:center}
 .bd_tmb_lst>li{position:relative;display:inline-block;vertical-align:top;*display:inline;*zoom:1}
@@ -922,9 +899,7 @@ body.viewer_blk{background:#222}
 .bd_zine.zine .is_tmb .tmb_wrp{margin-left:-84px}
 .bd_zine.zine .is_tmb .ribbon{position:absolute;margin:-1px 1px}
 .bd_zine h3{font-size:14px;line-height:1.3}
-/* .bd_zine.zine .cnt{overflow:hidden;max-height:32px;margin:6px 0 4px;font-size:12px;line-height:16px} */
-.bd_zine.zine .cnt{margin:6px 0 4px;font-size:12px;line-height:16px; color:#777;}
-.bd_zine.zine .cnt p { font-size:12px; line-height:16px; color:#777;}
+.bd_zine.zine .cnt{overflow:hidden;max-height:32px;margin:6px 0 4px;font-size:12px;line-height:16px}
 .bd_zine.zine .info>span{margin:6px 4px 0 0;padding-right:6px}
 .bd_zine.zine .info b{margin-left:2px}
 .bd_zine.card>li{margin:6px}
@@ -1045,4 +1020,92 @@ body.viewer{padding:0}
 }
 @media only screen and (max-width:420px){
 #viewer_lst{display:none !important}
+}
+
+.display-toggle{
+	display: none;
+}
+
+.stk_display{
+	padding: 0;
+	min-height: 170px;
+	max-height: 250px;
+	width: 655px;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+	margin: 15px auto 0 auto;
+	line-height: 0;
+}
+
+.stk_display .stk_body{
+	border-top:1px solid #DDD;
+	/*width: 100%;*/
+}
+
+.stk_display .stk_head{
+    box-sizing: border-box;
+}
+
+.stk_display .stk_head>ul>li{
+	float: left;
+	position: static;
+	background: #e9ebee;
+}
+
+.stk_display>.stk_head>ul>li.sticker_icon{
+	display:inline-block;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background-color: #EEE;
+	line-height: 40px;
+	color: #A0A0A0;
+}
+
+.stk_display>.stk_head>ul>li:nth-child(n+2){
+	border-left: 1px solid #bababa;
+}
+
+.stk_display>.stk_head>ul>li.sticker_icon a{
+	text-decoration: none;
+	color: #A0A0A0;
+}
+
+.stk_cmt .sticker_pack, .stk_cmt_reply .sticker_pack{
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+.sticker_pack>li{
+	display: inline;
+}
+
+.sticker_pack div>img{
+	width:40px;
+	height:40px;
+	object-fit: cover;
+}
+
+.stk_display>.stk_body{
+	padding: 3px;
+}
+
+.stk_display>.stk_body>ul{
+	overflow-y:auto;
+	min-height: 160px;
+	max-height: 200px;
+}
+
+.stk_display>.stk_body>ul>li{
+	display: inline;
+}
+.stk_display>.stk_body>ul>li>a{
+	display: inline-block;
+	background-size: cover;
+	background-position: 50% 50%;
+	width: 90px;
+	height: 90px;
+	margin: 3px;
+	border-radius:3px;
 }
