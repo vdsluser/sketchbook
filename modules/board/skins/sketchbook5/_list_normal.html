@@ -125,9 +125,9 @@ $order_type="desc";
 					<td cond="$val->idx!=-1" class="<!--@if($val->eid=='link_url')-->link_url<!--@else-->m_no<!--@end-->"><!--@if($val->eid=='rating')--><span class="starRating" title="{$document->getExtraValueHTML($val->idx)}{$lang->score}"><span style="width:{$document->getExtraValueHTML($val->idx)*10}%">{$document->getExtraValueHTML($val->idx)}</span></span><!--@else-->{$document->getExtraValueHTML($val->idx)}<!--@end--></td>
 					</block>
 					<td cond="$grant->manager" class="check m_no"><input type="checkbox" name="cart" value="{$document->document_srl}" class="iCheck" title="Check This Article" onclick="doAddDocumentCart(this)" checked="checked"|cond="$document->isCarted()" /></td>
+				<!--@end-->
 				{@ $listNo ++;}
 				</tr>
-			<!--@end-->
 		<!--@end-->
 	</tbody>
 </table>
