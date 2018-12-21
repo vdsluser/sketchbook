@@ -139,48 +139,67 @@
 			{@ $etIdx++ }
 			</tr>
 		</table>
+
 		<!--// 본문에 이미지 없을 때 -->
 		<p cond="$mi->no_attached_img && !$oDocument->thumbnailExists()" style="margin-bottom:30px;text-align:center"><img src="{$mi->no_attached_img}" alt="No Attached Image" /></p>
 		<!--// 본문 -->
 		<div cond="$mi->img_insert=='2'" class="xe_content rd_gallery">
 			<block loop="$oDocument->getUploadedFiles()=>$key,$file">
-<block cond="!$mi->img_insert2">
-{@
-	$ext=substr($file->source_filename, -4);
-	$ext=strtolower($ext);
-	$extImg=in_array($ext,array('.jpg','jpeg','.gif','.png'));
-}
-</block>
-<block cond="$mi->img_insert2">
-{@
-	$ext=substr($file->source_filename, -15);
-	$ext=strtolower($ext);
-	$extImg=in_array($ext,array('_rd_gallery.jpg','rd_gallery.jpeg','_rd_gallery.gif','_rd_gallery.png'));
-}
-</block>
-			<img cond="$extImg" src="{$file->uploaded_filename}" alt="" />
+				<block cond="!$mi->img_insert2">
+					{@
+						$ext=substr($file->source_filename, -4);
+						$ext=strtolower($ext);
+						$extImg=in_array($ext,array('.jpg','jpeg','.gif','.png'));
+					}
+				</block>
+				<block cond="$mi->img_insert2">
+					{@
+						$ext=substr($file->source_filename, -15);
+						$ext=strtolower($ext);
+						$extImg=in_array($ext,array('_rd_gallery.jpg','rd_gallery.jpeg','_rd_gallery.gif','_rd_gallery.png'));
+					}
+				</block>
+				<img cond="$extImg" src="{$file->uploaded_filename}" alt="" />
 			</block>
 		</div>
+
+
+		<!--@if($mi->contentsTopAd == 'Y')-->
+			{$mi->contentsTopAdTag;}
+		<!--@end-->
+
+
+		<!--// 컨텐츠 -->
 		<article>{$oDocument->getContent(false)}</article>
+
+
+		<!--@if($mi->contentsBottomAd == 'Y')-->
+			{$mi->contentsBottomAdTag;}
+		<!--@end-->
+
+
 		<div cond="$mi->img_insert=='3'" class="xe_content rd_gallery">
 			<block loop="$oDocument->getUploadedFiles()=>$key,$file">
-<block cond="!$mi->img_insert2">
-{@
-	$ext=substr($file->source_filename, -4);
-	$ext=strtolower($ext);
-	$extImg=in_array($ext,array('.jpg','jpeg','.gif','.png'));
-}
-</block>
-<block cond="$mi->img_insert2">
-{@
-	$ext=substr($file->source_filename, -15);
-	$ext=strtolower($ext);
-	$extImg=in_array($ext,array('_rd_gallery.jpg','rd_gallery.jpeg','_rd_gallery.gif','_rd_gallery.png'));
-}
-</block>
+				<block cond="!$mi->img_insert2">
+					{@
+						$ext=substr($file->source_filename, -4);
+						$ext=strtolower($ext);
+						$extImg=in_array($ext,array('.jpg','jpeg','.gif','.png'));
+					}
+				</block>
+			<block cond="$mi->img_insert2">
+				{@
+					$ext=substr($file->source_filename, -15);
+					$ext=strtolower($ext);
+					$extImg=in_array($ext,array('_rd_gallery.jpg','rd_gallery.jpeg','_rd_gallery.gif','_rd_gallery.png'));
+				}
+			</block>
 			<img cond="$extImg" src="{$file->uploaded_filename}" alt="" />
 			</block>
 		</div>
+
+
+
 		<!--// Tag -->
 		{@ $tag_list=$oDocument->get('tag_list') }
 		<div cond="count($tag_list)" class="rd_t_f rd_tag css3pie clear">
@@ -193,7 +212,7 @@
 			</ul>
 		</div>
 	</div>
-
+		
 	<!--// Footer -->
 	<div class="rd_ft">
 		<!--// Sign -->
